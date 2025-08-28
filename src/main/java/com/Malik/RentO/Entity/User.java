@@ -9,6 +9,10 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -35,4 +39,7 @@ public class User {
     private String state;
     @NonNull
     private Long pingCode;
+
+    private List<ObjectId> itemId= new ArrayList<>();
+    private List<ObjectId> bookingId= new ArrayList<>();
 }
