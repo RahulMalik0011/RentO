@@ -30,7 +30,7 @@ public class User {
     private String password;
     @Indexed(unique = true)
     @NonNull
-    private String phone;
+    private Long phone;
     @NonNull
     private String address;
     @NonNull
