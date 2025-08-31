@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 @Data
@@ -38,8 +37,11 @@ public class User {
     @NonNull
     private String state;
     @NonNull
-    private Long pingCode;
+    private Long pincode;
 
+    private List<String> userRoles;
     private List<ObjectId> itemId= new ArrayList<>();
     private List<ObjectId> bookingId= new ArrayList<>();
+
+
 }

@@ -10,4 +10,5 @@ public interface ItemRepository extends MongoRepository<Item, ObjectId> {
     List<Item> findByCategory(String category);
     List<Item> findByTitleContainingIgnoreCase(String title);  // Search by name
     List<Item> findByAvailableTrue();
+    List<Item> findByAvailableTrueAndOwnerIdNot(ObjectId ownerId);
 }
